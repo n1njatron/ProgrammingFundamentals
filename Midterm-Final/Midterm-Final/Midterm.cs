@@ -18,13 +18,15 @@ namespace Midterm_Final
 
         private void MidFinal_Load(object sender, EventArgs e)
         {
-            label1.Text = "";
-        }
+            //Declarations
+            bool takeOut;
+            string bunType = " ";
+            int pattyNum;
 
-        private void btnOne_Click(object sender, EventArgs e)
-        {
-            label1.Text = "Button Clicked!";
+            Array[] cheeseType;
+            Array[] toppings;
+            Array[] sauce;
+            Array[] optionsArray;
         }
-
     }
 }
