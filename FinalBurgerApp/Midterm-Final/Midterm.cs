@@ -248,6 +248,7 @@ namespace Midterm_Final
         {
             orderstep = "Summary";
             lblSummaryList.Text = lblPreview.Text;
+            lblSummary5.Text = lblPreviewLocation.Text;
         }
 
         private void btnBuild_Click(object sender, EventArgs e)
@@ -536,6 +537,21 @@ namespace Midterm_Final
             pnlComplete.Visible = false;
 
             lblPreview.Text = "";
+        }
+
+        private void pnlBuildPreview_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlBuildPreview.Visible == true)
+            {
+                if (takeOut == false)
+                {
+                    lblPreviewLocation.Text = "Dine-In";
+                }
+                else
+                {
+                    lblPreviewLocation.Text = "Take-out";
+                }
+            }
         }
     }
 

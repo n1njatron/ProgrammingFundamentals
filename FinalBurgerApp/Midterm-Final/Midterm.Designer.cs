@@ -86,6 +86,8 @@
             this.btnComplete = new System.Windows.Forms.Button();
             this.lblComplete2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPreviewLocation = new System.Windows.Forms.Label();
+            this.lblSummary5 = new System.Windows.Forms.Label();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -357,17 +359,19 @@
             // pnlBuildPreview
             // 
             this.pnlBuildPreview.BackColor = System.Drawing.Color.Black;
+            this.pnlBuildPreview.Controls.Add(this.lblPreviewLocation);
             this.pnlBuildPreview.Controls.Add(this.lblPreview);
             this.pnlBuildPreview.Location = new System.Drawing.Point(198, 69);
             this.pnlBuildPreview.Name = "pnlBuildPreview";
             this.pnlBuildPreview.Size = new System.Drawing.Size(93, 451);
             this.pnlBuildPreview.TabIndex = 5;
+            this.pnlBuildPreview.VisibleChanged += new System.EventHandler(this.pnlBuildPreview_VisibleChanged);
             // 
             // lblPreview
             // 
             this.lblPreview.AutoSize = true;
             this.lblPreview.BackColor = System.Drawing.Color.White;
-            this.lblPreview.Location = new System.Drawing.Point(3, 18);
+            this.lblPreview.Location = new System.Drawing.Point(3, 38);
             this.lblPreview.Name = "lblPreview";
             this.lblPreview.Size = new System.Drawing.Size(71, 13);
             this.lblPreview.TabIndex = 0;
@@ -565,6 +569,7 @@
             // pnlSummary
             // 
             this.pnlSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnlSummary.Controls.Add(this.lblSummary5);
             this.pnlSummary.Controls.Add(this.lblSummary4);
             this.pnlSummary.Controls.Add(this.lblSummary3);
             this.pnlSummary.Controls.Add(this.lblSummaryList);
@@ -601,7 +606,7 @@
             // 
             this.lblSummaryList.AutoSize = true;
             this.lblSummaryList.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.lblSummaryList.Location = new System.Drawing.Point(96, 208);
+            this.lblSummaryList.Location = new System.Drawing.Point(96, 223);
             this.lblSummaryList.Name = "lblSummaryList";
             this.lblSummaryList.Size = new System.Drawing.Size(0, 18);
             this.lblSummaryList.TabIndex = 2;
@@ -707,14 +712,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Your order has been submitted!";
             // 
+            // lblPreviewLocation
+            // 
+            this.lblPreviewLocation.AutoSize = true;
+            this.lblPreviewLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviewLocation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPreviewLocation.Location = new System.Drawing.Point(3, 13);
+            this.lblPreviewLocation.Name = "lblPreviewLocation";
+            this.lblPreviewLocation.Size = new System.Drawing.Size(0, 13);
+            this.lblPreviewLocation.TabIndex = 1;
+            // 
+            // lblSummary5
+            // 
+            this.lblSummary5.AutoSize = true;
+            this.lblSummary5.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lblSummary5.Location = new System.Drawing.Point(90, 198);
+            this.lblSummary5.Name = "lblSummary5";
+            this.lblSummary5.Size = new System.Drawing.Size(0, 18);
+            this.lblSummary5.TabIndex = 5;
+            // 
             // lblComplete1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1402, 644);
+            this.Controls.Add(this.pnlSummary);
+            this.Controls.Add(this.pnlBuildPreview);
             this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlComplete);
-            this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlSauce);
             this.Controls.Add(this.pnlBuild);
             this.Controls.Add(this.pnlOrderType);
@@ -724,7 +749,6 @@
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlStart);
             this.Controls.Add(this.pnlPrevNext);
-            this.Controls.Add(this.pnlBuildPreview);
             this.Controls.Add(this.pnlNavigation);
             this.Name = "lblComplete1";
             this.Text = "MidFinal";
@@ -817,6 +841,8 @@
         private System.Windows.Forms.Label lblSummary3;
         private System.Windows.Forms.Label lblSummary4;
         private System.Windows.Forms.Button btnComplete;
+        private System.Windows.Forms.Label lblPreviewLocation;
+        private System.Windows.Forms.Label lblSummary5;
     }
 }
 
