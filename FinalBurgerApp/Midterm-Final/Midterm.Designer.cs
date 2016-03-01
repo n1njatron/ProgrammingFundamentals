@@ -83,9 +83,9 @@
             this.lblBuild = new System.Windows.Forms.Label();
             this.pnlSpecialty = new System.Windows.Forms.Panel();
             this.pnlComplete = new System.Windows.Forms.Panel();
+            this.btnComplete = new System.Windows.Forms.Button();
             this.lblComplete2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnComplete = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -263,7 +263,7 @@
             // 
             // btnPotato
             // 
-            this.btnPotato.Location = new System.Drawing.Point(281, 311);
+            this.btnPotato.Location = new System.Drawing.Point(467, 179);
             this.btnPotato.Name = "btnPotato";
             this.btnPotato.Size = new System.Drawing.Size(95, 77);
             this.btnPotato.TabIndex = 3;
@@ -273,7 +273,7 @@
             // 
             // btnWheat
             // 
-            this.btnWheat.Location = new System.Drawing.Point(393, 179);
+            this.btnWheat.Location = new System.Drawing.Point(293, 179);
             this.btnWheat.Name = "btnWheat";
             this.btnWheat.Size = new System.Drawing.Size(92, 69);
             this.btnWheat.TabIndex = 2;
@@ -294,9 +294,11 @@
             // lblBun
             // 
             this.lblBun.AutoSize = true;
+            this.lblBun.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBun.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblBun.Location = new System.Drawing.Point(261, 89);
             this.lblBun.Name = "lblBun";
-            this.lblBun.Size = new System.Drawing.Size(87, 13);
+            this.lblBun.Size = new System.Drawing.Size(147, 20);
             this.lblBun.TabIndex = 0;
             this.lblBun.Text = "Choose your bun";
             // 
@@ -672,6 +674,17 @@
             this.pnlComplete.Size = new System.Drawing.Size(778, 532);
             this.pnlComplete.TabIndex = 12;
             // 
+            // btnComplete
+            // 
+            this.btnComplete.Font = new System.Drawing.Font("Maiandra GD", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComplete.Location = new System.Drawing.Point(281, 349);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(177, 61);
+            this.btnComplete.TabIndex = 2;
+            this.btnComplete.Text = "Click here to go to main screen";
+            this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
             // lblComplete2
             // 
             this.lblComplete2.AutoSize = true;
@@ -694,22 +707,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Your order has been submitted!";
             // 
-            // btnComplete
-            // 
-            this.btnComplete.Font = new System.Drawing.Font("Maiandra GD", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.Location = new System.Drawing.Point(281, 349);
-            this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(177, 61);
-            this.btnComplete.TabIndex = 2;
-            this.btnComplete.Text = "Click here to go to main screen";
-            this.btnComplete.UseVisualStyleBackColor = true;
-            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
-            // 
             // lblComplete1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1402, 644);
+            this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlComplete);
             this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlSauce);
@@ -717,7 +720,6 @@
             this.Controls.Add(this.pnlOrderType);
             this.Controls.Add(this.pnlToppings);
             this.Controls.Add(this.pnlCheese);
-            this.Controls.Add(this.pnlBun);
             this.Controls.Add(this.pnlSpecialty);
             this.Controls.Add(this.pnlLocation);
             this.Controls.Add(this.pnlStart);

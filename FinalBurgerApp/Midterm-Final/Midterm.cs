@@ -141,7 +141,19 @@ namespace Midterm_Final
                     pnlSummary.Visible = true;
                     break;
                 case "Summary":
+                    pnlStart.Visible = false;
+                    pnlLocation.Visible = false;
+                    pnlOrderType.Visible = false;
+                    pnlPrevNext.Visible = false;
+                    pnlBuild.Visible = false;
+                    pnlBun.Visible = false;
+                    pnlCheese.Visible = false;
+                    pnlToppings.Visible = false;
+                    pnlSauce.Visible = false;
+                    pnlNavigation.Visible = false;
+                    pnlBuildPreview.Visible = false;
                     pnlSummary.Visible = false;
+                    pnlSpecialty.Visible = false;
                     pnlComplete.Visible = true;
                     break;
                 default:
@@ -315,7 +327,7 @@ namespace Midterm_Final
             //optionsArray[1] = "American \n";
 
             string cheeseType = Cheese.selectCheese("American \n");
-            optionsArray[1] += cheeseType;
+            optionsArray[1] = cheeseType;
             build();
             //lblPreview.Text += optionsArray[1];
             btnNext.Enabled = true;
@@ -326,7 +338,7 @@ namespace Midterm_Final
             //optionsArray[1] = "Cheddar \n";
 
             string cheeseType = Cheese.selectCheese("Cheddar \n");
-            optionsArray[1] += cheeseType;
+            optionsArray[1] = cheeseType;
             build();
             //lblPreview.Text += optionsArray[1];
             btnNext.Enabled = true;
@@ -336,7 +348,7 @@ namespace Midterm_Final
         {
             //optionsArray[1] = "Swiss \n";
             string cheeseType = Cheese.selectCheese("Swiss \n");
-            optionsArray[1] += cheeseType;
+            optionsArray[1] = cheeseType;
             build();
             //lblPreview.Text += optionsArray[1];
             btnNext.Enabled = true;
@@ -346,7 +358,7 @@ namespace Midterm_Final
         {
             //optionsArray[1] = "No Cheese \n";
             string cheeseType = Cheese.selectCheese("No Cheese \n");
-            optionsArray[1] += cheeseType;
+            optionsArray[1] = cheeseType;
             build();
             //lblPreview.Text += optionsArray[1];
             btnNext.Enabled = true;
@@ -355,81 +367,58 @@ namespace Midterm_Final
         //Topping buttons
         private void btnTomato_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Tomato \n";
             string toppingChoice = Toppings.selectToppings("Tomato \n");
-            optionsArray[2] += toppingChoice;
-            build();
-            //lblPreview.Text += optionsArray[2];
-            btnNext.Enabled = true;
+            AssembleToppings(toppingChoice);
         }
 
         private void btnOnions_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Onions \n";
             string toppingChoice = Toppings.selectToppings("Onions \n");
-            optionsArray[2] += toppingChoice;
-            build();
-            //lblPreview.Text += optionsArray[2];
-            btnNext.Enabled = true;
+            AssembleToppings(toppingChoice);
         }
 
         private void btnPickles_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Pickles \n";
             string toppingChoice = Toppings.selectToppings("Pickles \n");
-            optionsArray[2] += toppingChoice;
-            build();
-            //lblPreview.Text += optionsArray[2];
-            btnNext.Enabled = true;
+            AssembleToppings(toppingChoice);
         }
 
         private void btnLettuce_Click(object sender, EventArgs e)
         {
-            //optionsArray[2] = "Lettuce \n";
             string toppingChoice = Toppings.selectToppings("Lettuce \n");
-            optionsArray[2] += toppingChoice;
+            AssembleToppings(toppingChoice);
+        }
+
+        private void AssembleToppings(string selectedToppings)
+        {
+            optionsArray[2] += selectedToppings;
             build();
-            //lblPreview.Text += optionsArray[2];
             btnNext.Enabled = true;
         }
 
         //Sauce buttons
         private void btnKetchup_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Ketchup \n";
             string sauceChoices = Sauce.selectSauces("Ketchup \n");
-            optionsArray[3] += sauceChoices;
-            build();
-            //lblPreview.Text += optionsArray[3];
-            btnNext.Enabled = true;
+            AssembleSauce(sauceChoices);
         }
 
         private void btnMustard_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Mustard \n";
             string sauceChoices = Sauce.selectSauces("Mustard \n");
-            optionsArray[3] += sauceChoices;
-            build();
-            //lblPreview.Text += optionsArray[3];
-            btnNext.Enabled = true;
+            AssembleSauce(sauceChoices);
         }
 
         private void btnMayo_Click(object sender, EventArgs e)
         {
-            //optionsArray[3] = "Mayo \n";
             string sauceChoices = Sauce.selectSauces("Mayo \n");
             AssembleSauce(sauceChoices);
-            //optionsArray[3] += sauceChoices;
-            //build();
-            ////lblPreview.Text += optionsArray[3];
-            //btnNext.Enabled = true;
         }
 
         private void AssembleSauce(string chosenSauce)
         {
             optionsArray[3] += chosenSauce;
             build();
-            //lblPreview.Text += optionsArray[3];
             btnNext.Enabled = true;
         }
 
