@@ -52,6 +52,80 @@ namespace Midterm_Final
            
         }
 
+        //Panel visibility changes
+        private void pnlStart_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlStart.Visible == true)
+            {
+                orderstep = "Start";
+            }
+        }
+
+        private void pnlLocation_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlLocation.Visible == true)
+            {
+                orderstep = "Location";
+            }
+        }
+
+        private void pnlOrdertType_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlOrderType.Visible == true)
+            {
+                orderstep = "OrderType";
+            }
+        }
+
+        private void pnlBun_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlBun.Visible == true)
+            {
+                orderstep = "Bun";
+                btnNext.Enabled = false;
+
+                if (optionsArray[0] == "")
+                {
+                    btnNext.Enabled = false;
+                }
+            }
+        }
+
+        private void pnlCheese_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlCheese.Visible == true)
+            {
+                orderstep = "Cheese";
+                btnNext.Enabled = false;
+
+                if (optionsArray[1] == "")
+                {
+                    btnNext.Enabled = false;
+                }
+            }
+        }
+
+        private void pnlToppings_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlToppings.Visible == true)
+            {
+                orderstep = "Toppings";
+            }
+        }
+
+
+        private void pnlBuild_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlBuild.Visible == true)
+            {
+                orderstep = "Build";
+                
+                
+            }
+            btnNext.Visible = false;
+            
+        }
+
         //button click events
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -62,7 +136,7 @@ namespace Midterm_Final
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            
+
             takeOut = false;
             pnlLocation.Visible = false;
             pnlOrderType.Visible = true;
@@ -80,7 +154,7 @@ namespace Midterm_Final
         private void btnPrev_Click(object sender, EventArgs e)
         {
             switch (orderstep)
-            { 
+            {
                 case "OrderType":
                     pnlOrderType.Visible = false;
                     pnlLocation.Visible = true;
@@ -92,6 +166,10 @@ namespace Midterm_Final
                 case "Bun":
                     pnlBun.Visible = false;
                     pnlBuild.Visible = true;
+                    break;
+                case "Cheese":
+                    pnlCheese.Visible = false;
+                    pnlBun.Visible = true;
                     break;
                 default:
                     pnlStart.Visible = true;
@@ -112,49 +190,13 @@ namespace Midterm_Final
                     pnlBun.Visible = false;
                     pnlCheese.Visible = true;
                     break;
+                case "Cheese":
+                    pnlCheese.Visible = false;
+                    pnlToppings.Visible = true;
+                    break;
                 default:
                     pnlStart.Visible = true;
                     break;
-            }
-        }
-
-
-        //Panel visibility changes
-        private void pnlOrdertType_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlOrderType.Visible == true)
-            {
-                orderstep = "ordertype";
-            }
-        }
-
-        private void pnlLocation_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlLocation.Visible == true)
-            {
-                orderstep = "Location";
-            }
-        }
-
-        private void pnlStart_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlStart.Visible == true)
-            {
-                orderstep = "Start";
-            }
-        }
-
-        private void pnlBun_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlBun.Visible == true)
-            {
-                orderstep = "Bun";
-                btnNext.Enabled = false;
-
-                if (optionsArray[0] == "")
-                {
-                    btnNext.Enabled = false;
-                }
             }
         }
 
@@ -162,24 +204,11 @@ namespace Midterm_Final
         {
             pnlOrderType.Visible = false;
             pnlBuild.Visible = true;
-            
         }
 
         private void btnSpecialty_Click(object sender, EventArgs e)
         {
             pnlOrderType.Visible = false;
-        }
-
-        private void pnlBuild_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlBuild.Visible == true)
-            {
-                orderstep = "Build";
-                
-                
-            }
-            btnNext.Visible = false;
-            
         }
 
         private void btnBegin_VisibleChanged(object sender, EventArgs e)
@@ -215,25 +244,30 @@ namespace Midterm_Final
         {
             optionsArray[1] = "American \n";
             lblPreview.Text += optionsArray[1];
+            btnNext.Enabled = true;
         }
 
         private void btnCheddar_Click(object sender, EventArgs e)
         {
             optionsArray[1] = "Cheddar \n";
             lblPreview.Text += optionsArray[1];
+            btnNext.Enabled = true;
         }
 
         private void btnSwiss_Click(object sender, EventArgs e)
         {
             optionsArray[1] = "Swiss \n";
             lblPreview.Text += optionsArray[1];
+            btnNext.Enabled = true;
         }
 
         private void btnNoCheese_Click(object sender, EventArgs e)
         {
             optionsArray[1] = "No Cheese \n";
             lblPreview.Text += optionsArray[1];
+            btnNext.Enabled = true;
         }
+
 
     }
 }
