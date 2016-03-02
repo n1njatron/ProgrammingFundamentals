@@ -450,6 +450,8 @@ namespace Midterm_Final
             pnlSummary.Visible = false;
             pnlSpecialty.Visible = false;
             pnlComplete.Visible = false;
+
+            orderstep = "Sauce";
         }
 
         private void btnNavCheese_Click(object sender, EventArgs e)
@@ -468,6 +470,8 @@ namespace Midterm_Final
             pnlSummary.Visible = false;
             pnlSpecialty.Visible = false;
             pnlComplete.Visible = false;
+
+            orderstep = "Sauce";
         }
 
         private void btnNavToppings_Click(object sender, EventArgs e)
@@ -486,6 +490,9 @@ namespace Midterm_Final
             pnlSummary.Visible = false;
             pnlSpecialty.Visible = false;
             pnlComplete.Visible = false;
+
+            optionsArray[2] = "";
+            orderstep = "Sauce";
         }
 
         private void btnNavSauce_Click(object sender, EventArgs e)
@@ -504,6 +511,9 @@ namespace Midterm_Final
             pnlSummary.Visible = false;
             pnlSpecialty.Visible = false;
             pnlComplete.Visible = false;
+
+            optionsArray[3] = "";
+            orderstep = "Sauce";
         }
 
         private void build()
