@@ -119,7 +119,10 @@ namespace Midterm_Final
         {
             switch (orderstep)
             {
-
+                case "Location":
+                    pnlLocation.Visible = false;
+                    pnlOrderType.Visible = true;
+                    break;
                 case "Build":
                     pnlBuild.Visible = false;
                     pnlBun.Visible = true;
@@ -164,7 +167,7 @@ namespace Midterm_Final
 
 
         //Panel visibility changes
-        private void pnlOrdertType_VisibleChanged(object sender, EventArgs e)
+        private void pnlOrderType_VisibleChanged(object sender, EventArgs e)
         {
             if (pnlOrderType.Visible == true)
             {
