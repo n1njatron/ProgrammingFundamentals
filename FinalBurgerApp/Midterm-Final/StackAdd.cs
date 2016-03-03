@@ -9,7 +9,7 @@ namespace Midterm_Final
     {
         public static void addToStack(string options)
         {
-            var Midterm_Final = new lblComplete1();
+            var Midterm_Final = new BurgerApp();
 
             //Midterm_Final.lblPreview.Text = options;
             //Midterm_Final.optionsArray[0] = options;

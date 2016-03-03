@@ -9,7 +9,7 @@ namespace Midterm_Final
     {
         public static string selectSauces(string sauces)
         {
-            var Midterm_Final = new lblComplete1();
+            var Midterm_Final = new BurgerApp();
 
             //Midterm_Final.optionsArray[3] = sauces;
             var sauceChoice = sauces;

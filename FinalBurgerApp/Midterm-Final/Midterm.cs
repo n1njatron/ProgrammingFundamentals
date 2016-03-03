@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Midterm_Final
 {
-    public partial class lblComplete1 : Form
+    public partial class BurgerApp : Form
     {
 
         //Declarations
@@ -23,7 +23,7 @@ namespace Midterm_Final
         string[] sauce = new string[] { };
         public string[] optionsArray = new string[4];
 
-        public lblComplete1()
+        public BurgerApp()
         {
             InitializeComponent();
         }
@@ -244,11 +244,26 @@ namespace Midterm_Final
             }
         }
 
+        private void pnlBuildPreview_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pnlBuildPreview.Visible == true)
+            {
+                if (takeOut == false)
+                {
+                    lblPreviewLocation.Text = "Dine-In";
+                }
+                else
+                {
+                    lblPreviewLocation.Text = "Take-out";
+                }
+            }
+        }
+
         private void pnlSummary_VisibleChanged(object sender, EventArgs e)
         {
             orderstep = "Summary";
             lblSummaryList.Text = lblPreview.Text;
-            lblSummary5.Text = lblPreviewLocation.Text;
+            lblSummaryLocation.Text = lblPreviewLocation.Text;
         }
 
         private void btnBuild_Click(object sender, EventArgs e)
@@ -294,7 +309,7 @@ namespace Midterm_Final
             build();
             //lblPreview.Text = optionsArray[0];
             btnNext.Enabled = true;
-       
+
         }
 
         private void btnWheat_Click(object sender, EventArgs e)
@@ -516,12 +531,28 @@ namespace Midterm_Final
             orderstep = "Sauce";
         }
 
+        private void btnSummaryLocationChange_Click(object sender, EventArgs e)
+        {
+            if (lblPreviewLocation.Text == "Dine-In")
+            {
+                lblPreviewLocation.Text = "Take-out";
+                lblSummaryLocation.Text = "Take-out";
+            }
+
+            else
+            {
+                lblPreviewLocation.Text = "Dine-in";
+                lblSummaryLocation.Text = "Dine-in";
+            }
+
+        }
+
         private void build()
         {
-            lblPreview.Text = optionsArray[0] + 
-                              optionsArray[1] + 
+            lblPreview.Text = optionsArray[0] +
+                              optionsArray[1] +
                               optionsArray[2] +
-                              optionsArray[3] ;
+                              optionsArray[3];
         }
 
         private void build2()
@@ -547,22 +578,15 @@ namespace Midterm_Final
             pnlComplete.Visible = false;
 
             lblPreview.Text = "";
+
+            optionsArray[0] = "";
+            optionsArray[1] = "";
+            optionsArray[2] = "";
+            optionsArray[3] = "";
         }
 
-        private void pnlBuildPreview_VisibleChanged(object sender, EventArgs e)
-        {
-            if (pnlBuildPreview.Visible == true)
-            {
-                if (takeOut == false)
-                {
-                    lblPreviewLocation.Text = "Dine-In";
-                }
-                else
-                {
-                    lblPreviewLocation.Text = "Take-out";
-                }
-            }
+        
         }
     }
 
-}
+

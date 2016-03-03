@@ -1,6 +1,6 @@
 ﻿namespace Midterm_Final
 {
-    partial class lblComplete1
+    partial class BurgerApp
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             this.btnNavCheese = new System.Windows.Forms.Button();
             this.btnNavBun = new System.Windows.Forms.Button();
             this.pnlBuildPreview = new System.Windows.Forms.Panel();
+            this.lblPreviewLocation = new System.Windows.Forms.Label();
             this.lblPreview = new System.Windows.Forms.Label();
             this.pnlCheese = new System.Windows.Forms.Panel();
             this.btnSwiss = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             this.btnKetchup = new System.Windows.Forms.Button();
             this.lblSauce = new System.Windows.Forms.Label();
             this.pnlSummary = new System.Windows.Forms.Panel();
+            this.lblSummaryLocation = new System.Windows.Forms.Label();
             this.lblSummary4 = new System.Windows.Forms.Label();
             this.lblSummary3 = new System.Windows.Forms.Label();
             this.lblSummaryList = new System.Windows.Forms.Label();
@@ -86,8 +88,7 @@
             this.btnComplete = new System.Windows.Forms.Button();
             this.lblComplete2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPreviewLocation = new System.Windows.Forms.Label();
-            this.lblSummary5 = new System.Windows.Forms.Label();
+            this.btnSummaryLocationChange = new System.Windows.Forms.Button();
             this.pnlStart.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             this.pnlOrderType.SuspendLayout();
@@ -367,6 +368,16 @@
             this.pnlBuildPreview.TabIndex = 5;
             this.pnlBuildPreview.VisibleChanged += new System.EventHandler(this.pnlBuildPreview_VisibleChanged);
             // 
+            // lblPreviewLocation
+            // 
+            this.lblPreviewLocation.AutoSize = true;
+            this.lblPreviewLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviewLocation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPreviewLocation.Location = new System.Drawing.Point(3, 13);
+            this.lblPreviewLocation.Name = "lblPreviewLocation";
+            this.lblPreviewLocation.Size = new System.Drawing.Size(0, 13);
+            this.lblPreviewLocation.TabIndex = 1;
+            // 
             // lblPreview
             // 
             this.lblPreview.AutoSize = true;
@@ -569,7 +580,8 @@
             // pnlSummary
             // 
             this.pnlSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnlSummary.Controls.Add(this.lblSummary5);
+            this.pnlSummary.Controls.Add(this.btnSummaryLocationChange);
+            this.pnlSummary.Controls.Add(this.lblSummaryLocation);
             this.pnlSummary.Controls.Add(this.lblSummary4);
             this.pnlSummary.Controls.Add(this.lblSummary3);
             this.pnlSummary.Controls.Add(this.lblSummaryList);
@@ -580,6 +592,15 @@
             this.pnlSummary.Size = new System.Drawing.Size(778, 532);
             this.pnlSummary.TabIndex = 9;
             this.pnlSummary.VisibleChanged += new System.EventHandler(this.pnlSummary_VisibleChanged);
+            // 
+            // lblSummaryLocation
+            // 
+            this.lblSummaryLocation.AutoSize = true;
+            this.lblSummaryLocation.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lblSummaryLocation.Location = new System.Drawing.Point(105, 197);
+            this.lblSummaryLocation.Name = "lblSummaryLocation";
+            this.lblSummaryLocation.Size = new System.Drawing.Size(0, 18);
+            this.lblSummaryLocation.TabIndex = 5;
             // 
             // lblSummary4
             // 
@@ -712,26 +733,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Your order has been submitted!";
             // 
-            // lblPreviewLocation
+            // btnSummaryLocationChange
             // 
-            this.lblPreviewLocation.AutoSize = true;
-            this.lblPreviewLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviewLocation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPreviewLocation.Location = new System.Drawing.Point(3, 13);
-            this.lblPreviewLocation.Name = "lblPreviewLocation";
-            this.lblPreviewLocation.Size = new System.Drawing.Size(0, 13);
-            this.lblPreviewLocation.TabIndex = 1;
+            this.btnSummaryLocationChange.Location = new System.Drawing.Point(200, 196);
+            this.btnSummaryLocationChange.Name = "btnSummaryLocationChange";
+            this.btnSummaryLocationChange.Size = new System.Drawing.Size(75, 23);
+            this.btnSummaryLocationChange.TabIndex = 6;
+            this.btnSummaryLocationChange.Text = "Change";
+            this.btnSummaryLocationChange.UseVisualStyleBackColor = true;
+            this.btnSummaryLocationChange.Click += new System.EventHandler(this.btnSummaryLocationChange_Click);
             // 
-            // lblSummary5
-            // 
-            this.lblSummary5.AutoSize = true;
-            this.lblSummary5.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.lblSummary5.Location = new System.Drawing.Point(90, 198);
-            this.lblSummary5.Name = "lblSummary5";
-            this.lblSummary5.Size = new System.Drawing.Size(0, 18);
-            this.lblSummary5.TabIndex = 5;
-            // 
-            // lblComplete1
+            // BurgerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -750,8 +762,8 @@
             this.Controls.Add(this.pnlStart);
             this.Controls.Add(this.pnlPrevNext);
             this.Controls.Add(this.pnlNavigation);
-            this.Name = "lblComplete1";
-            this.Text = "MidFinal";
+            this.Name = "BurgerApp";
+            this.Text = "burgerApp";
             this.Load += new System.EventHandler(this.MidFinal_Load);
             this.pnlStart.ResumeLayout(false);
             this.pnlStart.PerformLayout();
@@ -842,7 +854,8 @@
         private System.Windows.Forms.Label lblSummary4;
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Label lblPreviewLocation;
-        private System.Windows.Forms.Label lblSummary5;
+        private System.Windows.Forms.Label lblSummaryLocation;
+        private System.Windows.Forms.Button btnSummaryLocationChange;
     }
 }
 

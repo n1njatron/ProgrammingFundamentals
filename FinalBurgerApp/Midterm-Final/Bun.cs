@@ -10,7 +10,7 @@ namespace Midterm_Final
     {
         public static string createBun(string _bunType)
         {
-            var Midterm_Final = new lblComplete1();
+            var Midterm_Final = new BurgerApp();
 
             Midterm_Final.optionsArray[0] = _bunType;
             var bunType = _bunType;

@@ -15,7 +15,7 @@ namespace Midterm_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new lblComplete1());
+            Application.Run(new BurgerApp());
         }
     }
 }
